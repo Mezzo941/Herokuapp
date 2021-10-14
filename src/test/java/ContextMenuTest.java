@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class ContextMenuTest extends BaseTest {
 
     @Test
-    public void contextMenuIsWork(){
+    public void contextMenuWork(){
         driver.get("http://the-internet.herokuapp.com/context_menu");
         WebElement window = driver.findElement(By.id("hot-spot"));
         action.contextClick(window).build().perform();
@@ -17,4 +17,5 @@ public class ContextMenuTest extends BaseTest {
         alert.dismiss();
         Assert.assertEquals(driver.findElement(By.cssSelector("h3")).getText(),"Context Menu");
     }
+
 }
